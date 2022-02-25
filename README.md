@@ -10,6 +10,9 @@ Welcome to my catalogue of cute doggos. Here you can enjoy cute pictures of dogg
 
 - Clone forked repository
 
+- Open directory
+   ### `code perx-evaluation`
+
 - Install packages:
    ### `npm install`
 
