@@ -23,11 +23,11 @@ const DogList = () => {
 
  const dogCards = dogs.map(dog => <DogCard dogData={dog}/>)
 
- const cardsLoading = Array(20).fill("").map(() => <LoadingCard/>)
+ const loadingCards = Array(20).fill("").map(() => <LoadingCard/>)
 
  return (
   <ul className="dog-list">
-   {loading ? cardsLoading : dogCards}
+   {loading ? loadingCards : dogCards}
   </ul>
  )
 }
