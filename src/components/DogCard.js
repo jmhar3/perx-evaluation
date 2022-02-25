@@ -8,7 +8,7 @@ const DogCard = ({ dogData }) => {
 
  return (
   <li
-   className={`dogCard ${flipped && 'flipped'}`}
+   className={`dog-card ${flipped && 'flipped'}`}
    onClick={() => setFlipped(!flipped)}
   >
    {flipped

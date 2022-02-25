@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import DogCard from './DogCard'
+import DogCard from './DogCard';
+import LoadingCard from './LoadingCard';
 
 const DogList = () => {
  const [dogs, setDogs] = useState([])
@@ -20,9 +21,13 @@ const DogList = () => {
    .catch(err => console.log(err.toJSON()))
  }, [])
 
+ const dogCards = dogs.map(dog => <DogCard dogData={dog}/>)
+
+ const cardsLoading = Array(20).fill("").map(() => <LoadingCard/>)
+
  return (
-  <ul className="dogList">
-   {dogs.map(dog => <DogCard dogData={dog}/>)}
+  <ul className="dog-list">
+   {loading ? cardsLoading : dogCards}
   </ul>
  )
 }
