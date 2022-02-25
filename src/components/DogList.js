@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import DogCard from './DogCard'
 
-export const DogList = () => {
+const DogList = () => {
  const [dogs, setDogs] = useState([])
  const [loading, setLoading] = useState(true)
 
@@ -16,11 +17,14 @@ export const DogList = () => {
     setDogs(res.data)
     setLoading(false)
    })
- })
+   .catch(err => console.log(err.toJSON()))
+ }, [])
 
  return (
-  <div>
-   
-  </div>
+  <ul>
+   {dogs.map(dog => <DogCard dogData={dog}/>)}
+  </ul>
  )
 }
+
+export default DogList;

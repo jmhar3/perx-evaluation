@@ -1,4 +1,4 @@
-import { DogList } from './components/DogList'
+import DogList from './components/DogList'
 import './App.css';
 
 function App() {
