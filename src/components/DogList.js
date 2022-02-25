@@ -21,7 +21,7 @@ const DogList = () => {
  }, [])
 
  return (
-  <ul>
+  <ul className="dogList">
    {dogs.map(dog => <DogCard dogData={dog}/>)}
   </ul>
  )
