@@ -6,14 +6,14 @@ Welcome to my catalogue of cute doggos. Here you can enjoy cute pictures of dogg
 
 ## Instructions
 
--Fork repository
+- Fork repository
 
--Clone forked repository
+- Clone forked repository
 
--Install packages:
+- Install packages:
 ### `npm install`
 
--Run the app:
+- Run the app:
 ### `npm start`
 
 Open http://localhost:3000 to view
