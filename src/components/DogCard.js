@@ -1,20 +1,21 @@
 import { useState } from 'react';
 
 const DogCard = ({ dogData }) => {
- const [flipped, setFlipped] = useState(false)
- const { url, id, breeds } = dogData
- console.log(breeds[0])
+ const [flipped, setFlipped] = useState(false);
+ const { url, id, breeds } = dogData;
+
+ const flippable = breeds.length > 0;
+
  return (
   <li
-   className={`dogCard ${flipped && "flipped"}`}
+   className={`dogCard ${flipped && 'flipped'}`}
    onClick={() => setFlipped(!flipped)}
   >
    {flipped
-    ? breeds.length > 0
+    ? flippable
      ? <>
-      <h3>{breeds[0].name}</h3>
-      <h4>{breeds[0].bred_for}</h4>
-      <p>
+      <p>{breeds[0].bred_for}</p>
+      <h4>
        Breed Group: {breeds[0].breed_group}
        <br />
        Life Span: {breeds[0].life_span}
@@ -22,10 +23,14 @@ const DogCard = ({ dogData }) => {
        Height: {breeds[0].height.metric} meters
        <br />
        Weight: {breeds[0].weight.metric} kilos
-      </p>
+      </h4>
+      <p>{breeds[0].temperament}</p>
      </>
-     : <h3>Anonymous Doggo</h3>
-    : <img src={url} alt={id} />
+     : <h3>No doggy data</h3>
+    : <>
+     <img src={url} alt={id} />
+     <h4>{flippable ? breeds[0].name : "Anonymous Doggo"}</h4>
+    </>
    }
   </li>
  )
