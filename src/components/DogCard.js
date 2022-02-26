@@ -13,7 +13,7 @@ const DogCard = ({ dogData }) => {
 
  const cardFront =
   <>
-   <img src={url} alt={id} />
+   <img src={url} alt={id}/>
    <h4>{dataAvailable ? breeds[0].name : "Anonymous Doggo"}</h4>
   </>
 
@@ -21,6 +21,7 @@ const DogCard = ({ dogData }) => {
   <li
    className={`dog-card ${flipped && 'flipped'}`}
    onClick={() => setFlipped(!flipped)}
+   key={id}
   >
    {flipped ? cardBack : cardFront}
   </li>

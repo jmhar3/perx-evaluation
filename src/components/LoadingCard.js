@@ -1,6 +1,6 @@
-const LoadingCard = () => {
+const LoadingCard = ({index}) => {
  return (
-  <li className="loading-card">
+  <li className="loading-card" key={index}>
    <h1>🐶</h1>
   </li>
  )

@@ -23,7 +23,7 @@ const DogList = () => {
 
  const dogCards = dogs.map(dog => <DogCard dogData={dog}/>)
 
- const loadingCards = Array(20).fill("").map(() => <LoadingCard/>)
+ const loadingCards = Array(20).fill("").map((e, i) => <LoadingCard index={i}/>)
 
  return (
   <ul className="dog-list">

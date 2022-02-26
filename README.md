@@ -21,3 +21,8 @@ Welcome to my catalogue of cute doggos. Here you can enjoy cute pictures of dogg
    ### `npm start`
 
 - Open http://localhost:3000 to view
+
+- Run the tests:
+   ### `npm test`
+
+- When prompted, press 'a' to run all tests
